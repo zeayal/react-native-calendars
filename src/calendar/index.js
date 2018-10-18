@@ -31,6 +31,10 @@ class Calendar extends Component {
 
     // Specify style for calendar container element. Default = {}
     style: viewPropTypes.style,
+
+    // Specify weeks style for week element. Default = {}
+    weekStyle: viewPropTypes.style,
+    
     // Initially visible month. Default = Date()
     current: PropTypes.any,
     // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
@@ -234,7 +238,7 @@ class Calendar extends Component {
       week.unshift(this.renderWeekNumber(days[days.length - 1].getWeek()));
     }
 
-    return (<View style={this.style.week} key={id}>{week}</View>);
+    return (<View style={[this.style.week, this.props.weekStyle]} key={id}>{week}</View>);
   }
 
   render() {

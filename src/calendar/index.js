@@ -190,6 +190,7 @@ class Calendar extends Component {
         >
           {date}
         </DayComp>
+        
       </View>
     );
   }

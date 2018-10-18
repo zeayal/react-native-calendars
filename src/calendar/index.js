@@ -34,9 +34,6 @@ class Calendar extends Component {
 
     // Specify weeks style for week element. Default = {}
     weekStyle: viewPropTypes.style,
-    
-    // extraData
-    extraData: PropTypes.any,
 
     // Initially visible month. Default = Date()
     current: PropTypes.any,
@@ -183,7 +180,7 @@ class Calendar extends Component {
     return (
       <View style={{flex: 1, alignItems: 'center'}} key={id}>
         <DayComp
-          extraItem={this.props.extraData[date]}
+          markedDate={this.props.markedDates[date]}
           state={state}
           theme={this.props.theme}
           onPress={this.pressDay}

@@ -181,7 +181,7 @@ class Calendar extends Component {
     return (
       <View style={{ flex: 1, alignItems: 'center' }} key={id}>
         <DayComp
-          markedDate={this.props.markedDates[currentYMD]}
+          markedDate={this.props.markedDates ? this.props.markedDates[currentYMD] : ''}
           state={state}
           theme={this.props.theme}
           onPress={this.pressDay}
